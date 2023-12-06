@@ -1,0 +1,730 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{amsmath} % Add this line to import the amsmath package
+\begin{document}
+\title{Final Exam Review}
+\author{Amarnath Patel}
+\date{\today}
+
+\maketitle
+\section{Part 1}
+
+\subsection{Section 2.1}
+In calculus, a tangent line is a straight line that touches a curve at a specific point, without crossing or intersecting it. The tangent line represents the instantaneous rate of change of the curve at that point.
+
+\subsection{Calculating a Tangent Line}
+To calculate the equation of a tangent line at a given point on a curve, we can use the following steps:
+
+1. Find the derivative of the function representing the curve.
+2. Evaluate the derivative at the given point to find the slope of the tangent line.
+3. Use the point-slope form of a line to write the equation of the tangent line, using the slope and the given point.
+
+For example, if we have a function $f(x)$ and we want to find the equation of the tangent line at the point $(a, f(a))$, we can use the derivative $f'(x)$ to calculate the slope $m$ of the tangent line:
+
+\[ m = f'(a) \]
+
+Then, we can write the equation of the tangent line using the point-slope form:
+
+\[ y - f(a) = m(x - a) \]
+
+This equation represents the tangent line to the curve at the point $(a, f(a))$.
+
+\subsection{Calculating a Secant Line}
+A secant line is a straight line that intersects a curve at two distinct points. It provides an average rate of change between those two points.
+
+To calculate the equation of a secant line, we can follow these steps:
+
+1. Select two points on the curve, let's say $(x_1, f(x_1))$ and $(x_2, f(x_2))$.
+2. Calculate the slope of the secant line using the formula:
+
+\[ m = \frac{{f(x_2) - f(x_1)}}{{x_2 - x_1}} \]
+
+3. Use the point-slope form of a line to write the equation of the secant line, using one of the points and the slope:
+
+\[ y - f(x_1) = m(x - x_1) \]
+
+This equation represents the secant line between the points $(x_1, f(x_1))$ and $(x_2, f(x_2))$.
+
+\subsection{Tangent Problem}
+
+Find an equation of the tangent line to the parabola $y = x^2$ at the point $P(1, 1)$.
+
+\subsection{Solution}
+
+To find the equation of the tangent line to the parabola $y = x^2$ at the point $P(1, 1)$, we first need to find the derivative of the function $y = x^2$, which represents the slope of the tangent line at any point on the curve.
+
+The derivative of $y = x^2$ is $y' = 2x$. 
+
+At the point $P(1, 1)$, the slope of the tangent line is $y'(1) = 2(1) = 2$.
+
+Then, we can use the point-slope form of a line to write the equation of the tangent line:
+
+\[ y - y_1 = m(x - x_1) \]
+
+Substituting $m = 2$, $x_1 = 1$, and $y_1 = 1$ into the equation gives:
+
+\[ y - 1 = 2(x - 1) \]
+
+Simplifying this equation gives the equation of the tangent line:
+
+\[ y = 2x - 1 \]
+
+\subsection{Velocity Problem}
+
+Suppose that a ball is dropped from the upper observation deck of the CN Tower in Toronto, 450 m above the ground. Find the velocity of the ball after 5 seconds.
+
+\subsection{Solution}
+
+The velocity of an object in free fall is given by the equation $v = gt$, where $g$ is the acceleration due to gravity (approximately $9.8$ m/s² on Earth) and $t$ is the time in seconds.
+
+After 5 seconds, the velocity of the ball would be $v = 9.8 \times 5 = 49$ m/s (ignoring air resistance).
+
+\subsection{Section 2.2 The Limit of a Function}
+
+Consider the function $f(x) = \frac{x^2 - 1}{x - 1}$.
+
+\subsection{Numerically}
+
+We can find the limit as $x$ approaches $1$ by substituting values close to $1$:
+
+\begin{align*}
+f(0.9) &= \frac{(0.9)^2 - 1}{0.9 - 1} = 1.9 \\
+f(0.99) &= \frac{(0.99)^2 - 1}{0.99 - 1} = 1.99 \\
+f(1.01) &= \frac{(1.01)^2 - 1}{1.01 - 1} = 2.01 \\
+f(1.1) &= \frac{(1.1)^2 - 1}{1.1 - 1} = 2.1
+\end{align*}
+
+As $x$ gets closer to $1$, $f(x)$ gets closer to $2$. So, $\lim_{x\to 1} f(x) = 2$.
+
+\subsection{Graphically}
+
+We can also find the limit by looking at the graph of the function.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+\addplot [
+    domain=0:2, 
+    samples=100, 
+    color=red,
+]
+{(x^2 - 1)/(x - 1)};
+\end{axis}
+\end{tikzpicture}
+\caption{Graph of $f(x) = \frac{x^2 - 1}{x - 1}$}
+\end{figure}
+
+From the graph, we can see that as $x$ approaches $1$, $f(x)$ approaches $2$.
+
+\subsection{Vertical Asymptotes}
+Vertical asymptotes occur at the x-values where the function goes to positive or negative infinity. These are typically the values of x that make the denominator of a rational function equal to zero.
+
+\begin{enumerate}
+\item Set the denominator of the function equal to zero and solve for x.
+\end{enumerate}
+    
+\subsection{Horizontal Asymptotes}
+    
+Horizontal asymptotes are the y-values that the function approaches as x goes to positive or negative infinity.
+
+\begin{enumerate}
+\item If the degree of the numerator is less than the degree of the denominator, the x-axis (y = 0) is the horizontal asymptote.
+\item If the degree of the numerator is equal to the degree of the denominator, the horizontal asymptote is the ratio of the leading coefficients.
+\item If the degree of the numerator is greater than the degree of the denominator, there is no horizontal asymptote.
+\end{enumerate}
+
+\subsection{Limit Laws}
+
+The limit laws are a set of rules that allow us to find the limit of a function by breaking it down into simpler parts. Here they are:
+
+\begin{enumerate}
+\item \textbf{Constant Multiple Rule}: The limit of a constant times a function is the constant times the limit of the function.
+
+    \[ \lim_{x \to a} [cf(x)] = c \lim_{x \to a} f(x) \]
+
+\item \textbf{Sum/Difference Rule}: The limit of a sum/difference is the sum/difference of the limits.
+
+    \[ \lim_{x \to a} [f(x) \pm g(x)] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) \]
+
+\item \textbf{Product Rule}: The limit of a product is the product of the limits.
+
+    \[ \lim_{x \to a} [f(x)g(x)] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \]
+
+\item \textbf{Quotient Rule}: The limit of a quotient is the quotient of the limits (provided that the limit of the denominator is not zero).
+
+    \[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} \]
+
+\item \textbf{Power Rule}: The limit of a power is the power of the limit.
+
+    \[ \lim_{x \to a} [f(x)]^n = [\lim_{x \to a} f(x)]^n \]
+
+\item \textbf{Root Rule}: The limit of a root is the root of the limit.
+
+    \[ \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)} \]
+\end{enumerate}
+
+\subsection{2.3 Calculating Limits using Limit Laws}
+
+Here are some notes on calculating limits using the limit laws:
+
+\begin{enumerate}
+\item \textbf{Direct Substitution}: If the function is defined at the point where the limit is being taken, you can directly substitute the value of the point into the function.
+
+\item \textbf{Factoring}: If direct substitution results in an indeterminate form (like 0/0), try factoring the function and canceling out common factors.
+
+\item \textbf{Rationalizing}: If the function involves a square root, try rationalizing the numerator or denominator to simplify the function.
+
+\item \textbf{L'Hopital's Rule}: If the limit results in an indeterminate form (like $0/0$ or $\infty/\infty$), you can differentiate the numerator and denominator separately and then take the limit.
+
+\item \textbf{Squeeze Theorem}: If the function is bounded by two other functions that have the same limit at a point, then the function also has that limit at that point.
+\end{enumerate}
+
+\subsection{2.5 Continuity}
+A  function \(f(x)\) is continuous at a point \(x = a\) if the following three conditions are met:
+
+\begin{enumerate}
+\item The function \(f(x)\) is defined at \(x = a\).
+\item The limit of \(f(x)\) as \(x\) approaches \(a\) exists.
+\item The limit of \(f(x)\) as \(x\) approaches \(a\) is equal to \(f(a)\).
+\end{enumerate}
+
+In other words, \(\lim_{x \to a} f(x) = f(a)\).
+
+A function is continuous on an interval if it is continuous at every point in that interval.
+
+\subsection{2.6 Limits Involving Infinity}
+
+The limit of \(1/x\) as \(x\) approaches infinity is 0. This is because as \(x\) becomes larger and larger, \(1/x\) becomes smaller and smaller, approaching 0.
+\[\lim_{x \to \infty} \frac{1}{x} = 0\]
+\[\lim_{x \to -\infty} e^x = 0\]
+
+The limit laws cannot be applied to infinite limits because $\infty$ is not a number ($\infty - \infty$ can't be defined).
+
+\subsection{2.7 Dervatives and Rate of change} 
+The slope of the tangent line to the curve at a point is given by the derivative of the function at that point. If the curve \(C\) has equation \(y = f(x)\) and we want to find the tangent line to \(C\) at the point \(P(a, f(a))\), then the slope of the tangent line is given by \(f'(a)\), where \(f'\) is the derivative of \(f\).
+
+The tangent line to a curve at a certain point is defined by the limit of the secant lines through that point and another point on the curve as the second point approaches the first one. This limit is the derivative of the function at that point.
+
+If \(f\) is a function and \(a\) is a point in its domain, the slope \(m\) of the tangent line to the graph of \(f\) at the point \((a, f(a))\) is given by:
+
+\[m = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}\]
+
+This limit, if it exists, is the derivative of \(f\) at \(a\), denoted \(f'(a)\).
+
+The limit definition of a derivative is as follows:
+
+If \(f\) is a function and \(a\) is a point in its domain, the derivative of \(f\) at \(a\), denoted \(f'(a)\), is given by:
+
+\[f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}\]
+
+This limit represents the slope of the tangent line to the graph of \(f\) at the point \((a, f(a))\).
+
+\subsection{2.8 The derivative as a function}
+
+Given the function \(f(x) = 1 - \frac{x}{2} + x\),
+
+We can find the derivative using the limit definition of a derivative:
+
+\[f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\]
+
+Substituting \(f(x + h)\) and \(f(x)\) into the formula, we get:
+
+\[f'(x) = \lim_{h \to 0} \frac{(1 - \frac{x + h}{2} + x + h) - (1 - \frac{x}{2} + x)}{h}\]
+
+Simplifying the expression inside the limit, we get:
+
+\[f'(x) = \lim_{h \to 0} \frac{-\frac{h}{2} + h}{h} = \lim_{h \to 0} \frac{h}{2} = \frac{1}{2}\]
+
+\subsection{3.1 Derivatives of Polynomials and Exponential Functions}
+The derivative of a constant is always 0. The derivative of a variable is always 1.
+The derivative of $(x^n)$, where $(n)$ is a real number, is $(nx^{n-1})$. If $(f(x) = x^n)$, then $(f'(x) = nx^{n-1})$.
+The derivative of a sum/difference of functions is the sum/difference of their derivatives. If (f(x) = g(x) + h(x)), then (f'(x) = g'(x) + h'(x)). Similarly, if (f(x) = g(x) - h(x)), then (f'(x) = g'(x) - h'(x)).
+\subsection{3.2 Product and Quotient rule}
+The derivative of a product of two functions is the first function times the derivative of the second function plus the second function times the derivative of the first function. If (f(x) = g(x)h(x)), then (f'(x) = g(x)h'(x) + h(x)g'(x)).
+The derivative of a quotient of two functions is the denominator times the derivative of the numerator minus the numerator times the derivative of the denominator, all over the square of the denominator. If \(f(x) = \frac{{g(x)}}{{h(x)}}\), then \(f'(x) = \frac{{h(x)g'(x) - g(x)h'(x)}}{{[h(x)]^2}}\).
+The derivative of ($e^x$) is ($e^x$). If ($f(x) = e^x$), then ($f'(x) = e^x$).
+
+\section{Part 2}
+
+\subsection{3.3 Derivatives of Trigonometric Functions}
+\begin{itemize}
+\item The derivative of the sine function: If \(f(x) = \sin(x)\), then \(f'(x) = \cos(x)\).
+\item The derivative of the cosine function: If \(f(x) = \cos(x)\), then \(f'(x) = -\sin(x)\).
+\item The derivative of the tangent function: If \(f(x) = \tan(x)\), then \(f'(x) = \sec^2(x)\).
+\item The derivative of the cotangent function: If \(f(x) = \cot(x)\), then \(f'(x) = -\csc^2(x)\).
+\item The derivative of the secant function: If \(f(x) = \sec(x)\), then \(f'(x) = \sec(x)\tan(x)\).
+\item The derivative of the cosecant function: If \(f(x) = \csc(x)\), then \(f'(x) = -\csc(x)\cot(x)\).
+\end{itemize}
+\subsection{3.4 The Chain Rule}
+The Chain Rule is a formula to compute the derivative of a composition of functions. In other words, if we have a function which is the composition of two other functions, the Chain Rule helps us to find its derivative.
+
+The Chain Rule is formally stated as follows:
+
+If we have two functions \(u(x)\) and \(v(x)\) and a function \(f(x)\) that is a composition of \(u\) and \(v\), i.e., \(f(x) = u(v(x))\), then the derivative of \(f\) with respect to \(x\) is given by:
+
+\[f'(x) = u'(v(x)) \cdot v'(x)\]
+
+This means that the derivative of the composite function \(f\) at a point \(x\) is the derivative of \(u\) evaluated at \(v(x)\) times the derivative of \(v\) at \(x\).
+
+\subsection{3.5 Implicit Differentiation}
+Implicit differentiation is a method used to find the derivative of a relation defined implicitly, i.e., a relation between \(x\) and \(y\) that is not explicitly solved for \(y\).
+
+Given an equation in the form \(F(x, y) = 0\), we can find \(\frac{dy}{dx}\) by differentiating both sides of the equation with respect to \(x\), treating \(y\) as a function of \(x\), and then solving for \(\frac{dy}{dx}\).
+
+Here are the steps for implicit differentiation:
+
+\begin{enumerate}
+\item Differentiate both sides of the equation with respect to \(x\), treating \(y\) as a function of \(x\).
+\item Collect all terms involving \(\frac{dy}{dx}\) on one side of the equation and move all other terms to the other side.
+\item Factor out \(\frac{dy}{dx}\) from the terms on its side of the equation.
+\item Solve for \(\frac{dy}{dx}\) by dividing both sides of the equation by the factor from the previous step.
+\end{enumerate}
+
+This method is particularly useful when the equation is difficult or impossible to solve for \(y\) explicitly, or when the explicit form would be cumbersome to differentiate.
+
+\subsection{3.6 Derivatives of Logarithmic and Exponential Functions}
+The derivative of the natural logarithm function: If \(f(x) = \ln(x)\), then \(f'(x) = \frac{1}{x}\).
+The derivative of the exponential function: If \(f(x) = e^x\), then \(f'(x) = e^x\).
+The derivative of the logarithm base \(b\) of \(x\) is given by:
+
+\[\frac{d}{dx} \log_b x = \frac{1}{{x \ln b}}\]
+
+This means that the rate of change of the function \(\log_b x\) with respect to \(x\) is \(\frac{1}{{x \ln b}}\).
+The derivative of the natural logarithm of a function \(u(x)\) is given by:
+
+\[\frac{d}{dx} \ln u = \frac{{u'}}{{u}}\]
+
+This means that the rate of change of the function \(\ln u\) with respect to \(x\) is \(\frac{{u'}}{{u}}\), where \(u'\) is the derivative of \(u\) with respect to \(x\).
+
+Logarithmic differentiation is a method used to differentiate functions by taking the natural logarithm of both sides of an equation. It is particularly useful when dealing with products, quotients, or powers of functions.
+
+Here are the steps for logarithmic differentiation:
+
+\begin{enumerate}
+\item Start with a function \(y = f(x)\).
+\item Take the natural logarithm of both sides: \(\ln(y) = \ln(f(x))\).
+\item Use the properties of logarithms to simplify the right side of the equation. This often involves using the fact that \(\ln(ab) = \ln(a) + \ln(b)\) and \(\ln\left(\frac{a}{b}\right) = \ln(a) - \ln(b)\).
+\item Differentiate both sides of the equation with respect to \(x\), using the chain rule on the left side: \(\frac{1}{y} \cdot y' = f'(x)\).
+\item Solve for \(y'\) to get the derivative of the original function.
+\end{enumerate}
+
+This method is especially useful when the function \(f(x)\) is a product or quotient of several functions, or a function raised to a power.
+
+
+\textbf{It is important to carefully distinguish between the Power Rule, \[f(x) = x^n \Rightarrow f'(x) = nx^{n-1}\], where the base is variable and the exponent is constant, and the rule for differentiating exponential functions, \[f(x) = b^x \Rightarrow f'(x) = b^x \ln b\], where the base is constant and the exponent is variable.}
+\\In general, there are four cases for exponents and bases:
+
+\begin{enumerate}
+\item \(\frac{d}{dx} b^n = 0\) (where \(b\) and \(n\) are constants)
+\item \(\frac{d}{dx} x^n = nx^{n-1} \cdot x'\) (where \(n\) is a constant)
+\item \(\frac{d}{dx} b^{f(x)} = b^{f(x)} \ln(b) \cdot f'(x)\) (where \(b\) is a constant)
+\item To find \(\frac{dy}{dx} = f(g(x))\), logarithmic differentiation can be used, as in the next example.
+\end{enumerate}
+
+\[e = \lim_{{x \to 0}} \left(1 + \frac{1}{x}\right)^x\]
+\[e = \lim_{{n \to \infty}} \left(1 + \frac{1}{n}\right)^n\]
+
+\begin{itemize}
+\item The derivative of the inverse sine function: If \(y = \sin^{-1}(x)\), then \(\frac{dy}{dx} = \frac{1}{\sqrt{1 - x^2}}\).
+\item The derivative of the inverse cosine function: If \(y = \cos^{-1}(x)\), then \(\frac{dy}{dx} = -\frac{1}{\sqrt{1 - x^2}}\).
+\item The derivative of the inverse tangent function: If \(y = \tan^{-1}(x)\), then \(\frac{dy}{dx} = \frac{1}{1 + x^2}\).
+\item The derivative of the inverse cotangent function: If \(y = \cot^{-1}(x)\), then \(\frac{dy}{dx} = -\frac{1}{1 + x^2}\).
+\item The derivative of the inverse secant function: If \(y = \sec^{-1}(x)\), then \(\frac{dy}{dx} = \frac{1}{|x|\sqrt{x^2 - 1}}\) for \(|x| > 1\).
+\item The derivative of the inverse cosecant function: If \(y = \csc^{-1}(x)\), then \(\frac{dy}{dx} = -\frac{1}{|x|\sqrt{x^2 - 1}}\) for \(|x| > 1\).
+\end{itemize}
+
+\subsection{3.9 Related Rates *}
+
+
+Related rates problems involve finding the rate at which one quantity changes by relating it to other quantities whose rates of change are known. The steps to solve related rates problems are as follows:
+
+\begin{enumerate}
+    \item \textbf{Read the problem carefully.} Identify the quantities that are changing and the rates at which they are changing.
+    \item \textbf{Draw a diagram.} If possible, sketch a diagram of the situation. Label the quantities that are changing with variables, and label the rates of change with derivatives.
+    \item \textbf{Write down the known rates and the rate you need to find.} This will help you keep track of what you're given and what you're trying to find.
+    \item \textbf{Find an equation that relates the quantities.} This equation comes from the physical situation and your understanding of the problem.
+    \item \textbf{Differentiate both sides of the equation with respect to time.} This will give you an equation that relates the rates of change of the quantities.
+    \item \textbf{Substitute the known rates and solve for the unknown rate.} This is the final step where you solve for the rate you're interested in.
+\end{enumerate}
+
+Here's an example problem:
+
+Suppose a snowball is melting in such a way that its diameter is decreasing at a rate of 2 cm/min. At what rate is the volume of the snowball decreasing when the diameter is 10 cm?
+
+\begin{enumerate}
+    \item \textbf{Read the problem carefully.} The diameter of the snowball is decreasing at a rate of 2 cm/min. We want to find the rate at which the volume is decreasing.
+    \item \textbf{Draw a diagram.} We can imagine the snowball as a sphere. The diameter is decreasing, so the radius (which is half the diameter) is also decreasing.
+    \item \textbf{Write down the known rates and the rate you need to find.} We know that \( \frac{dr}{dt} = -1 \) cm/min (the radius is decreasing). We want to find \( \frac{dV}{dt} \).
+    \item \textbf{Find an equation that relates the quantities.} The volume \( V \) of a sphere is given by \( V = \frac{4}{3} \pi r^3 \).
+    \item \textbf{Differentiate both sides of the equation with respect to time.} Using the chain rule, we get \( \frac{dV}{dt} = 4 \pi r^2 \frac{dr}{dt} \).
+    \item \textbf{Substitute the known rates and solve for the unknown rate.} Substituting \( r = 5 \) cm and \( \frac{dr}{dt} = -1 \) cm/min, we find that \( \frac{dV}{dt} = -100 \pi \) cm\(^3\)/min. So the volume of the snowball is decreasing at a rate of \( 100 \pi \) cm\(^3\)/min when the diameter is 10 cm.
+\end{enumerate}
+
+\subsection{4.1 Maximum and Minimum Values}
+
+To find local minimums, local maximums, absolute minimums, and absolute maximums of a function, follow these steps:
+
+\begin{enumerate}
+    \item \textbf{Find the derivative of the function.} This will allow you to find critical points where the derivative is zero or undefined.
+    \item \textbf{Set the derivative equal to zero and solve for x.} These x-values are potential local minimums and maximums.
+    \item \textbf{Use the second derivative test.} If the second derivative at a critical point is positive, the function has a local minimum there. If it's negative, the function has a local maximum there.
+    \item \textbf{Evaluate the function at the critical points and at the endpoints of the domain.} The largest of these values is the absolute maximum, and the smallest is the absolute minimum.
+\end{enumerate}
+
+\subsection{4.3 What derivatives tell us about the shape of a graph}
+
+
+The first derivative test is a method to determine whether a critical point of a function is a local minimum, local maximum, or neither. Here's how it works:
+
+\begin{enumerate}
+    \item \textbf{Find the derivative of the function and set it equal to zero to find the critical points.}
+    \item \textbf{Pick a test point to the left and right of each critical point and evaluate the derivative at these test points.}
+    \item \textbf{Check the sign of the derivative at the test points:}
+    \begin{itemize}
+        \item If the derivative changes from negative to positive at a critical point as you move from left to right, then the function has a local minimum there.
+        \item If the derivative changes from positive to negative, then the function has a local maximum there.
+        \item If the derivative does not change sign, then the critical point is not a local extremum.
+    \end{itemize}
+\end{enumerate}
+
+
+The second derivative test is a method used to determine whether a critical point of a function is a local minimum, local maximum, or a saddle point (in case of functions of two variables). Here's how it works:
+
+\begin{enumerate}
+    \item \textbf{Find the derivative of the function and set it equal to zero to find the critical points.}
+    \item \textbf{Compute the second derivative of the function.}
+    \item \textbf{Substitute the critical points into the second derivative.}
+    \item \textbf{Check the sign of the second derivative at the critical points:}
+    \begin{itemize}
+        \item If the second derivative at a critical point is positive, the function has a local minimum there.
+        \item If it's negative, the function has a local maximum there.
+        \item If the second derivative is zero, the test is inconclusive, and you'll need to use another method to classify the critical point.
+    \end{itemize}
+\end{enumerate}
+
+If the graph of $f$ lies above all of its tangents on an interval $I$, then $f$ is called \textit{concave upward} on $I$. If the graph of $f$ lies below all of its tangents on $I$, then $f$ is called \textit{concave downward} on $I$.
+\begin{enumerate}
+    \item[(a)] If $f''(x) > 0$ on an interval $I$, then the graph of $f$ is concave upward on $I$.
+    \item[(b)] If $f''(x) < 0$ on an interval $I$, then the graph of $f$ is concave downward on $I$.
+\end{enumerate}
+
+A point $P$ on a curve $y = f(x)$ is called an \textit{inflection point} if $f$ is continuous there and the curve changes from concave upward to concave downward or from concave downward to concave upward at $P$.
+
+\subsection{4.5 Summary of Curve Sketching}
+
+The domain of a graph is the set of all possible x-values (inputs) for which the function is defined. Here's how you can determine the domain of a graph:
+
+\begin{enumerate}
+    \item \textbf{Identify any x-values for which the function is undefined.} These could be values that result in division by zero, taking the square root of a negative number, or taking the logarithm of a non-positive number. These x-values are not in the domain.
+    \item \textbf{Look at the graph itself.} The domain is all x-values for which there is a point on the graph. If the graph extends infinitely to the left and right, the domain is all real numbers. If the graph stops at certain x-values, the domain is all x-values up to and including those points.
+\end{enumerate}
+
+The intercepts of a graph are the points where the graph intersects the x-axis (x-intercepts) and the y-axis (y-intercepts). Here's how you can find them:
+
+\begin{enumerate}
+    \item \textbf{Find the x-intercepts:} Set the function equal to zero and solve for x. The solutions are the x-intercepts.
+    \item \textbf{Find the y-intercept:} Substitute $x = 0$ into the function and solve for y. The solution is the y-intercept.
+\end{enumerate}
+
+The symmetry of a graph can be determined by checking for the following conditions:
+
+\begin{enumerate}
+    \item \textbf{Even Symmetry (Y-axis symmetry):} A graph has even symmetry if the shape is mirrored exactly at the y-axis. Mathematically, a function $f(x)$ has even symmetry if $f(x) = f(-x)$ for all $x$ in the domain of $f$.
+    \item \textbf{Odd Symmetry (Origin symmetry):} A graph has odd symmetry if the shape is mirrored exactly at the origin. Mathematically, a function $f(x)$ has odd symmetry if $f(-x) = -f(x)$ for all $x$ in the domain of $f$.
+\end{enumerate}
+
+Asymptotes of a function can be vertical, horizontal, or oblique (slant). Here's how you can find them:
+
+\begin{enumerate}
+    \item \textbf{Vertical Asymptotes:} These occur where the function becomes infinite. Set the denominator of the function equal to zero and solve for x.
+    \item \textbf{Horizontal Asymptotes:} These occur when the limit of the function as $x$ approaches infinity or negative infinity is a constant. Compare the degrees of the numerator and denominator:
+    \begin{itemize}
+        \item If the degree of the numerator is less than the denominator, the x-axis ($y = 0$) is the horizontal asymptote.
+        \item If the degrees are equal, the horizontal asymptote is the ratio of the leading coefficients.
+        \item If the degree of the numerator is greater than the denominator, there is no horizontal asymptote.
+    \end{itemize}
+    \item \textbf{Oblique Asymptotes:} These occur when the degree of the numerator is exactly one more than the degree of the denominator. Perform the division (either long division or synthetic division) to find the equation of the oblique asymptote.
+\end{enumerate}
+
+To find the intervals where a function is increasing or decreasing, follow these steps:
+
+\begin{enumerate}
+    \item \textbf{Find the derivative of the function:} The derivative of a function gives you the rate of change of the function. 
+    \item \textbf{Find the critical points:} Set the derivative equal to zero and solve for x. These points are where the function could change from increasing to decreasing, or vice versa.
+    \item \textbf{Test intervals between the critical points:} Choose a test point in each interval between the critical points and substitute these into the derivative. If the derivative is positive, the function is increasing on that interval. If the derivative is negative, the function is decreasing on that interval.
+\end{enumerate}
+
+To find the local and absolute maximums and minimums of a function, follow these steps:
+
+\begin{enumerate}
+    \item \textbf{Find the derivative of the function:} The derivative of a function gives you the rate of change of the function.
+    \item \textbf{Find the critical points:} Set the derivative equal to zero and solve for x. These points are where the function could change from increasing to decreasing, or vice versa, and are potential local maximums and minimums.
+    \item \textbf{Test intervals between the critical points:} Choose a test point in each interval between the critical points and substitute these into the derivative. If the derivative changes from positive to negative at a critical point, that point is a local maximum. If it changes from negative to positive, that point is a local minimum.
+    \item \textbf{Evaluate the function at the critical points and at the endpoints of the domain:} The highest of these values is the absolute maximum, and the lowest is the absolute minimum.
+\end{enumerate}
+
+To find the concavity and points of inflection of a function, follow these steps:
+
+\begin{enumerate}
+    \item \textbf{Find the second derivative of the function:} The second derivative of a function gives you the rate of change of the first derivative, which can tell you about the concavity of the function.
+    \item \textbf{Find the potential points of inflection:} Set the second derivative equal to zero and solve for x. These points are where the function could change concavity, and are potential points of inflection.
+    \item \textbf{Test intervals between the potential points of inflection:} Choose a test point in each interval between the potential points of inflection and substitute these into the second derivative. If the second derivative is positive, the function is concave up on that interval. If the second derivative is negative, the function is concave down on that interval.
+    \item \textbf{Determine the points of inflection:} A point of inflection occurs where the function changes concavity. If the concavity changes at a potential point of inflection, that point is a point of inflection.
+\end{enumerate}
+
+\subsection{Sketching the Graph of $y = \frac{2x^2}{x^2 - 1}$}
+
+To sketch the graph of the function $y = \frac{2x^2}{x^2 - 1}$, we can follow these steps:
+
+\begin{enumerate}
+    \item \textbf{Find the y-intercept:} Substitute $x = 0$ into the function and solve for y. The solution is the y-intercept.
+    \item \textbf{Check for symmetry:} Determine if the function has even or odd symmetry.
+    \item \textbf{Find the asymptotes:} Determine the vertical, horizontal, or oblique asymptotes of the function.
+    \item \textbf{Find the intervals of increase or decrease:} Determine where the function is increasing or decreasing.
+    \item \textbf{Find the local and absolute maximums and minimums:} Determine the local and absolute maximums and minimums of the function.
+    \item \textbf{Find the concavity and points of inflection:} Determine the concavity of the function and any points of inflection.
+\end{enumerate}
+\vspace{6cm}
+Now, we can sketch the graph based on these characteristics.
+
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = $x$,
+        ylabel = {$y$},
+        domain = -5:5,
+        samples = 100,
+        restrict y to domain=-10:10,
+        enlargelimits,
+    ]
+    \addplot [blue] {2*x^2/(x^2 - 1)};
+    \end{axis}
+\end{tikzpicture}
+
+\section{Part 3}
+
+\subsection{4.2 The Mean Value Theorem}
+
+Rolle's theorem is an important result in calculus that establishes a relationship between the derivative of a function and the existence of certain points in its domain. It states the following:
+
+\textbf{Theorem:} Let $f(x)$ be a function that satisfies the following conditions:
+\begin{enumerate}
+    \item $f(x)$ is continuous on the closed interval $[a, b]$.
+    \item $f(x)$ is differentiable on the open interval $(a, b)$.
+    \item $f(a) = f(b)$.
+\end{enumerate}
+Then, there exists at least one point $c$ in the open interval $(a, b)$ such that $f'(c) = 0$.
+
+In other words, if a function is continuous on a closed interval, differentiable on the corresponding open interval, and has the same function values at the endpoints of the interval, then there must be at least one point within the interval where the derivative of the function is zero.
+
+Rolle's theorem is important because it provides a necessary condition for the existence of critical points (points where the derivative is zero) within a given interval. It is often used as a stepping stone in the proof of other important theorems in calculus, such as the mean value theorem.
+
+The Mean Value Theorem is an important result in calculus that states the following:
+
+\textbf{Theorem:} Let $f(x)$ be a function that satisfies the following conditions: \begin{enumerate} \item $f(x)$ is continuous on the closed interval $[a, b]$. \item $f(x)$ is differentiable on the open interval $(a, b)$. \end{enumerate} Then, there exists at least one point $c$ in the open interval $(a, b)$ such that the derivative of $f(x)$ at $c$ is equal to the average rate of change of $f(x)$ over the interval $[a, b]$.
+Let's consider the function $f(x) = x^2$ on the interval $[1, 3]$.
+
+First, we need to check if the function satisfies the conditions of the Mean Value Theorem. The function $f(x) = x^2$ is continuous on the closed interval $[1, 3]$ and differentiable on the open interval $(1, 3)$.
+
+Next, we can calculate the average rate of change of $f(x)$ over the interval $[1, 3]$:
+
+\[
+\frac{{f(3) - f(1)}}{{3 - 1}} = \frac{{9 - 1}}{{2}} = 4
+\]
+
+According to the Mean Value Theorem, there exists at least one point $c$ in the open interval $(1, 3)$ such that $f'(c) = 4$.
+
+To find this point, we can calculate the derivative of $f(x)$:
+
+\[
+f'(x) = 2x
+\]
+
+Setting $f'(x) = 4$, we have:
+
+\[
+2x = 4 \implies x = 2
+\]
+
+Therefore, the point $c = 2$ satisfies the conditions of the Mean Value Theorem.
+
+Hence, the Mean Value Theorem guarantees that there exists a point $c$ in the open interval $(1, 3)$ where the derivative of $f(x) = x^2$ is equal to the average rate of change of $f(x)$ over the interval $[1, 3]$, which is 4.
+
+\subsection{4.4 Indeterminate Forms and l'Hopital's Rule}
+When evaluating limits, certain expressions may result in \textit{indeterminate forms}, which means that direct substitution yields an undefined or ambiguous result. The most common indeterminate forms are $0/0$ and $\infty/\infty$.
+
+To handle these indeterminate forms, L'Hôpital's Rule provides a powerful tool for simplifying the limit of a fraction by taking the derivative of the numerator and denominator. The rule is applicable when the limit of the ratio of the derivatives exists.
+
+
+Let $f(x)$ and $g(x)$ be differentiable functions on an open interval containing $c$ (except possibly at $c$), and suppose that $\lim_{x \to c} f(x) = \lim_{x \to c} g(x) = 0$ or $\pm \infty$. If $\lim_{x \to c} \frac{f'(x)}{g'(x)}$ exists, then
+
+\[
+\lim_{x \to c} \frac{f(x)}{g(x)} = \lim_{x \to c} \frac{f'(x)}{g'(x)}
+\]
+
+provided that the latter limit exists.
+
+
+\subsubsection{Example 1: $\frac{0}{0}$ Indeterminate Form}
+
+Consider the limit:
+
+\[
+\lim_{x \to a} \frac{\sin x}{x}
+\]
+
+This limit is indeterminate as it results in the form $\frac{0}{0}$. Applying L'Hôpital's Rule:
+
+\[
+\lim_{x \to a} \frac{\sin x}{x} = \lim_{x \to a} \frac{\cos x}{1} = \cos a
+\]
+
+\subsubsection{Example 2: $\frac{\infty}{\infty}$ Indeterminate Form}
+
+For the limit:
+
+\[
+\lim_{x \to \infty} \frac{x^2 + 3x}{2x - 5}
+\]
+
+which is in the form $\frac{\infty}{\infty}$, we can use L'Hôpital's Rule:
+
+\[
+\lim_{x \to \infty} \frac{x^2 + 3x}{2x - 5} = \lim_{x \to \infty} \frac{2x + 3}{2} = \infty
+\]
+
+\subsection{4.7 Optimization Problems}
+Consider a rectangular garden with length $l$ and width $w$. The goal is to minimize the cost of fencing, given by the function:
+\[
+C(l, w) = 5l + 10w
+\]
+
+Subject to the constraint that the area of the garden must be at least 24 square meters:
+\[
+A(l, w) = lw \geq 24
+\]
+
+To solve the optimization problem, we express the constraint in terms of one variable:
+\[
+l \geq \frac{24}{w}
+\]
+
+Substitute this expression for $l$ into the cost function:
+\[
+C(w) = 5\left(\frac{24}{w}\right) + 10w
+\]
+
+Find the critical points by taking the derivative of $C(w)$ and setting it equal to zero:
+\[
+C'(w) = -\frac{120}{w^2} + 10 = 0
+\]
+
+Solving for $w$, we get $w = \sqrt{12}$. Check the endpoints of the feasible region, and since $w$ must be positive, discard the negative solution. The critical point is $w = \sqrt{12}$.
+
+Find $l$ using the constraint:
+\[
+l = \frac{24}{w} = \frac{24}{\sqrt{12}} = 2\sqrt{3}
+\]
+
+So, the critical point is $(2\sqrt{3}, \sqrt{12})$ and the minimum cost occurs at this point.
+
+\subsection{4.9 Antiderivatives}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Function & Particular antiderivative & Function & Particular antiderivative \\
+\hline
+$c$ & $F(x) = cx$ & $\sin x$ & $F(x) = -2\cos x$ \\
+\hline
+$f(x) = 1$ & $F(x) = x$ & $\sec^2 x$ & $F(x) = \tan x$ \\
+\hline
+$x^n$ & $F(x) = \frac{1}{n+1}x^{n+1}$ & $\tan x$ & $F(x) = -\ln|\cos x|$ \\
+\hline
+$n \neq -1$ & $F(x) = \frac{1}{n+1}x^{n+1}$ & $\sec x$ & $F(x) = \ln|\sec x + \tan x|$ \\
+\hline
+$\ln |x|$ & $F(x) = x\ln|x| - x$ & $e^x$ & $F(x) = e^x$ \\
+\hline
+$\sin^2(2x)$ & $F(x) = \frac{1}{2}(x - \sin(2x))$ & $\tan^2(1+x)$ & $F(x) = x - \tan(1+x)$ \\
+\hline
+$b^x$ & $F(x) = \frac{b^x}{\ln b}$ & $\cosh x$ & $F(x) = \sinh x$ \\
+\hline
+$\ln b$ & $F(x) = x\ln b - x$ & $\sinh x$ & $F(x) = \cosh x$ \\
+\hline
+\end{tabular}
+
+\subsection{5.1 The Area and Distance Problems}
+
+iemann sums are a method used to approximate the area under a curve by dividing the interval into smaller subintervals and summing the areas of rectangles formed within each subinterval. The accuracy of the approximation increases as the number of subintervals increases.
+
+\begin{enumerate}
+\item Determine the interval: Identify the interval over which you want to calculate the Riemann sum. Let's say the interval is $[a, b]$.
+\item Divide the interval: Divide the interval $[a, b]$ into $n$ equal subintervals. The width of each subinterval is given by $\Delta x = \frac{b - a}{n}$.
+\item Determine the left and right endpoints: For each subinterval, determine the left and right endpoints. The left endpoint of the $i$th subinterval is given by $x_i = a + (i - 1)\Delta x$, and the right endpoint is given by $x_i = a + i\Delta x$.
+\item Calculate the function values: Evaluate the function at each left or right endpoint to obtain the function values. Let's denote the function as $f(x)$.
+\item Calculate the areas: For each subinterval, calculate the area of the rectangle formed by the function value and the width of the subinterval. For the left Riemann sum, the area is given by $A_i = f(x_i)\Delta x$. For the right Riemann sum, the area is given by $A_i = f(x_{i+1})\Delta x$.
+\item Sum the areas: Sum up all the areas calculated in step 5 to obtain the Riemann sum. For the left Riemann sum, the sum is given by $L_n = A_1 + A_2 + \ldots + A_n$. For the right Riemann sum, the sum is given by $R_n = A_2 + A_3 + \ldots + A_{n+1}$.
+\item Take the limit: As the number of subintervals approaches infinity ($n \rightarrow \infty$), the Riemann sum approaches the definite integral of the function over the interval $[a, b]$. The limit of the left Riemann sum is given by $L = \lim_{n \rightarrow \infty} L_n$, and the limit of the right Riemann sum is given by $R = \lim_{n \rightarrow \infty} R_n$.
+\item Convert to an integral: The limit of the Riemann sum can be expressed as an integral. For the left Riemann sum, the integral is given by $\int_{a}^{b} f(x) dx = L$. For the right Riemann sum, the integral is given by $\int_{a}^{b} f(x) dx = R$.
+\end{enumerate}
+
+By following these steps, you can calculate a Riemann sum using left and right endpoints and convert it to an integral.
+
+
+\subsection{5.2 The Definite Integral}
+The definite integral of a function $f(x)$ over an interval $[a, b]$ is the limit of the Riemann sum as the number of subintervals approaches infinity. It represents the signed area under the curve of the function from $a$ to $b$. The definite integral is denoted as $\int_{a}^{b} f(x) dx$ and is calculated using the Fundamental Theorem of Calculus, which states that if $F(x)$ is an antiderivative of $f(x)$, then $\int_{a}^{b} f(x) dx = F(b) - F(a)$.
+Here is a table of summation formulas for sums of powers:
+
+\begin{tabular}{|c|c|}
+\hline
+Sum & Formula \\
+\hline
+$\sum_{i=1}^{n} 1$ & $n$ \\
+\hline
+$\sum_{i=1}^{n} i$ & $\frac{n(n+1)}{2}$ \\
+\hline
+$\sum_{i=1}^{n} i^2$ & $\frac{n(n+1)(2n+1)}{6}$ \\
+\hline
+$\sum_{i=1}^{n} i^3$ & $\left(\frac{n(n+1)}{2}\right)^2$ \\
+\hline
+\end{tabular}
+
+These formulas can be used to calculate the sum of the first $n$ natural numbers, the sum of the squares of the first $n$ natural numbers, and the sum of the cubes of the first $n$ natural numbers, respectively.
+
+The midpoint rule is a method for approximating the definite integral of a function. It is a type of Riemann sum that uses the midpoint of each subinterval to determine the height of the rectangle. The midpoint rule can often provide a better approximation than the left or right Riemann sum.
+
+The steps to apply the midpoint rule are as follows:
+
+\begin{enumerate}
+\item Determine the interval: Identify the interval over which you want to calculate the integral. Let's say the interval is $[a, b]$.
+\item Divide the interval: Divide the interval $[a, b]$ into $n$ equal subintervals. The width of each subinterval is given by $\Delta x = \frac{b - a}{n}$.
+\item Determine the midpoints: For each subinterval, determine the midpoint. The midpoint of the $i$th subinterval is given by $m_i = a + (i - 0.5)\Delta x$.
+\item Calculate the function values: Evaluate the function at each midpoint to obtain the function values. Let's denote the function as $f(x)$.
+\item Calculate the areas: For each subinterval, calculate the area of the rectangle formed by the function value at the midpoint and the width of the subinterval. The area is given by $A_i = f(m_i)\Delta x$.
+\item Sum the areas: Sum up all the areas calculated in step 5 to obtain the approximation of the integral. The sum is given by $M_n = A_1 + A_2 + \ldots + A_n$.
+\end{enumerate}
+
+The approximation of the integral using the midpoint rule is given by $\int_{a}^{b} f(x) dx \approx M_n$.
+
+\subsection{5.3 The Fundamental Theorem of Calculus}
+
+The Fundamental Theorem of Calculus establishes a connection between differential calculus and integral calculus. It consists of two parts:
+
+\begin{enumerate}
+\item \textbf{First Part (also known as the Fundamental Theorem of Calculus, Part 1):} If $f$ is continuous on $[a, b]$ and $F$ is an antiderivative of $f$ on $[a, b]$, then $\int_{a}^{b} f(x) dx = F(b) - F(a)$. This part is primarily used for evaluating definite integrals when the antiderivative of the function can be found.
+
+\item \textbf{Second Part (also known as the Fundamental Theorem of Calculus, Part 2):} If $f$ is a function that is continuous over the interval $[a, b]$ and $F$ is a function such that $F'(x) = f(x)$ for all $x$ in $[a, b]$, then the function $F$ is an antiderivative of $f$. In other words, differentiation and integration are reverse processes.
+\end{enumerate}
+
+\subsection{5.4 Indefinite Integrals and the Net Change Theorem}
+
+An indefinite integral, also known as an antiderivative, of a function $f(x)$ is a function $F(x)$ whose derivative is $f(x)$. In other words, if $F'(x) = f(x)$, then $F(x)$ is an indefinite integral of $f(x)$. The notation for the indefinite integral of $f(x)$ is $\int f(x) dx = F(x) + C$, where $C$ is the constant of integration.
+The Net Change Theorem is a practical application of the Fundamental Theorem of Calculus. It states that the integral of a rate of change over an interval gives the net change over that interval. If $f(x)$ is the rate of change of a quantity and $F(x)$ is an antiderivative of $f(x)$, then the net change of the quantity over the interval $[a, b]$ is given by $\int_{a}^{b} f(x) dx = F(b) - F(a)$.
+
+
+\end{document}
+
